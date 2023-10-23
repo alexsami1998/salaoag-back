@@ -15,7 +15,7 @@ public class Cliente extends User{
 	
 	@JsonIgnore
 	@OneToMany(mappedBy = "cliente")
-	private List<Servico> servicos = new ArrayList<>();
+	private List<Agendamento> servicos = new ArrayList<>();
 	
 	public Cliente() {
 		super();
