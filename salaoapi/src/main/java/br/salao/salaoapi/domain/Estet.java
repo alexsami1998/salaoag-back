@@ -21,23 +21,23 @@ public class Estet extends User {
 	
 	@JsonIgnore
 	@OneToMany(mappedBy = "estet")
-	private List<Servico> servicos = new ArrayList<>();
+	private List<Agendamento> servicos = new ArrayList<>();
 	
 	public Estet() {
 		super();
-		addProfile(Profile.CLIENTE);
+		//addProfile(Profile.CLIENTE);
 	}
 	
 	public Estet(Integer id, String nome, String cpf, String email, String senha) {
 		super(id, nome, cpf, email, senha);
-		addProfile(Profile.CLIENTE);
+		//addProfile(Profile.CLIENTE);  //ajuste para automatizar direcionamento automatico de nomenclatura no front.
 	}
 	
-	public List<Servico> getServicos() {
+	public List<Agendamento> getServicos() {
 		return servicos;
 	}
 	
-	public void setServicos(List<Servico> servicos) {
+	public void setServicos(List<Agendamento> servicos) {
 		this.servicos = servicos;
 	}
 
